@@ -11,4 +11,4 @@
 ## 過去の4年実験
 - 2018: ざんねーん　これは回文ではありません (https://github.com/OptMist-Tokyo/experiment2018)
 - 2017: 居室情報を教えてくれるTwitterのbot (https://github.com/OptMist-Tokyo/experiment2017)
-- 2016: AMATERASU ～Automatic Blackboard Copy Device～ (http://dolicas.hatenablog.com/entry/2016/0
+- 2016: AMATERASU ～Automatic Blackboard Copy Device～ (http://dolicas.hatenablog.com/entry/2016/06/26/231848)
