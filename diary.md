@@ -105,3 +105,122 @@ d. QoL向上
 - ラズベリージャムを作成（ラズベリー（ミックス）の購入）
 - IHヒーターをもってくる
 - 顔認証の動作確認，パイプライン作成
+
+# ラズパイ実験第二回（4/26）
+
+## 画像アップ用URL(お試し用)
+
+http://mimari.php.xdomain.jp/login.html
+(ユーザ名：raspie，パスワード：sakusaku)
+## 本日の不真面目サイドの進捗
+- 顔認証サイトをラズパイ上で動かす
+→ひとまず作成完了。
+→ファイル名に名前を含むように変更！
+(DBとか使うといいかも) （DB勉強ヾ(●_ゝ-*)スルゾ!!）[name=金子]
+- ジャムを作る( )→今からやります！サボっててすみませんでしたああああ！
+
+## <font color="red">ラズパイ1段階目：ジャム</font>
+- https://www.cuoca.com/articles/jam/
+- ミックスベリー50g，グラニュー糖40g，レモン汁少々
+- ベリー溶かしたときに出る水を利用
+- 弱火で全体的にふつふつとなるまで煮る
+- へらの跡がしっかり残る感じまで
+![Imgur](https://i.imgur.com/BOizsQa.jpg)
+- 冷やしたあと，かさがだいぶ減った
+- かなりドロドロの状態に，色はブルーべリーの紫
+- ブルーベリーは除いてトッピング用にするべき
+- 【味】もう少し酸味がほしい→レモンで補う，砂糖60%
+- 【食感】けっこう固めだが，パイに乗せるならアリ？
+- カスタードとの取り合わせ→ココ重要!!
+
+## カメラ使う
+- ラズベリーpythonの練習。
+- ラズベリーパイに繋げたカメラに映ってる画像を画面に映すやつをつくった。
+- それにcを押すと画像を保存できる機能を追加した。
+
+![Imgur](https://i.imgur.com/Yb8RSXl.jpg)
+保存した画像
+## GPIO使う
+rpi.gpioをインストールした
+
+![Imgur](https://i.imgur.com/dOFkY41.jpg)
+やっている
+
+## AWSの環境構築
+AWS RekognitionをPythonのAPIを使って呼び出すためにboto3,awscliをインストールし，rekognitionのAPIを呼び出すテストを行なっているがなにか問題があるらしくエラーが返ってくる。→解決
+画像をローカルのディレクトリから読み込み顔を検出するメソッドが正しく動作することを確認した。以下のコマンドを実行すると，
+```
+python3 ~/workspace/facerecognition/test_from_local.py
+```
+```
+Detected labels in /var/www/html/files/sadakane.jpg
+Head : 99.9814224243164
+Hair : 96.28131103515625
+Person : 95.76986694335938
+Human : 95.76986694335938
+Haircut : 87.98538208007812
+Apparel : 78.93231964111328
+Clothing : 78.93231964111328
+Overcoat : 78.08843231201172
+Suit : 78.08843231201172
+Coat : 78.08843231201172
+Attorney : 76.434814453125
+Face : 75.42069244384766
+Jaw : 71.3918228149414
+Accessories : 71.13286590576172
+Tie : 71.13286590576172
+Accessory : 71.13286590576172
+Black Hair : 60.92500305175781
+Done...
+```
+のように出力され，物体検知ができていることがわかる。
+
+## その他メモ
+### raspberry piへのログイン方法
+```
+ssh pi@157.82.205.228
+```
+`157.82.205.228`はraspberry piのipアドレス(ist-membersに接続した状態でやること)．
+
+### raspberry piにopencvをインスコ
+```
+pip3 install opencv-python 
+sudo apt-get install libcblas-dev
+sudo apt-get install libhdf5-dev
+sudo apt-get install libhdf5-serial-dev
+sudo apt-get install libatlas-base-dev
+sudo apt-get install libjasper-dev 
+sudo apt-get install libqtgui4 
+sudo apt-get install libqt4-test
+```
+### IHヒーターの操作方法
+1. 電源ボタンを押す
+2. 加熱ボタンを押す
+3. 火加減調整ボタンで調整する（ジャムは焦げやすいので弱めで（温度:１or2））
+4. 煮詰まって来たら突沸を防ぐために保温モードに切り替える
+
+
+## 必要な電子部品類
+- サーボモータ
+- スイッチ
+    - http://akizukidenshi.com/catalog/g/gP-09826/
+- LED
+    - あるから必要無さそう？
+- スピーカー
+    - http://akizukidenshi.com/catalog/g/gP-05411/
+
+## 顔認識システムの名前
+- Face Pynition
+- Recognipy
+- pymission
+- MEIPI ( Manager of Entering Interface by raspberry PI ) 
+
+随時募集中！！
+
+### 今日参考にしたリンク
+
+- http://usicolog.nomaki.jp/engineering/raspberryPi/raspberryPi_Apache2.html
+- https://webkaru.net/linux/scp-command/
+- https://iotdiyclub.net/raspberry-pi-camera-python-1/
+- http://www.ic.daito.ac.jp/~mizutani/raspi/blinkingLED.html
+- https://note.nkmk.me/python-opencv-camera-to-still-image/
