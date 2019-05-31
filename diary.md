@@ -364,7 +364,7 @@ Rekognitionから返ってくるbouding boxの座標はスケーリングされ�
 # ラズパイ実験第五回（5/31）
 ## 本日の真面目サイドの進捗
 - サーボモータでドアを開けることに成功
-https://drive.cgoogle.com/file/d/2Gk711ZK6J68pSTFmHhDkg_sqhL-1FYV5/view
+https://drive.google.com/file/d/1Gk711ZK6J68pSTFmHhDkg_sqhL-1FYV5/view?usp=sharing
 - 控室外でボタン押す→カメラで顔認証→サーボモータでドアノブが動く、という通しの動きもうまくいった
 
 ## 本日不真面目サイドの進捗
