@@ -364,7 +364,7 @@ Rekognitionから返ってくるbouding boxの座標はスケーリングされ�
 # ラズパイ実験第五回（5/31）
 ## 本日の真面目サイドの進捗
 - サーボモータでドアを開けることに成功
-https://drive.google.com/file/d/1Gk711ZK6J68pSTFmHhDkg_sqhL-1FYV5/view?usp=sharing
+https://drive.google.com/file/d/2Gk711ZK6J68pSTFmHhDkg_sqhL-1FYV5/view
 - 控室外でボタン押す→カメラで顔認証→サーボモータでドアノブが動く、という通しの動きもうまくいった
 
 ## 本日不真面目サイドの進捗
@@ -374,3 +374,15 @@ https://drive.google.com/file/d/1Gk711ZK6J68pSTFmHhDkg_sqhL-1FYV5/view?usp=shari
 - パイ型を用いる際に真ん中を潰す必要がある
 - フォークで突き刺してもダメ
 - PHPマジわかんね ??(・⊿・)??
+
+# ラズパイ実験第六回（6/4）
+## 本日の真面目サイドの進捗
+- raspberry piとブレッドボードを一つの箱にまとめた
+![Imgur](https://i.imgur.com/PSwWUs7.jpg)
+
+- スライド大体完成した
+
+## 本日の不真面目サイドの進捗
+- 最終Raspberry Pie完成！！
+- 真ん中を潰す際にクッキングシートをひく！
+- スライドもちゃんと進めました。
