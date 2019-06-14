@@ -1,3 +1,5 @@
+# サーボモータ制御用モジュール
+
 import RPi.GPIO as GPIO
 import time
 import signal
