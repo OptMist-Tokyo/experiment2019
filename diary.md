@@ -395,3 +395,6 @@ https://drive.google.com/file/d/2Gk711ZK6J68pSTFmHhDkg_sqhL-1FYV5/view
 - 発表練習
 ## 本日の不真面目サイドの進捗
 - オレンジパイをつくった
+
+# ラズパイ実験第八回 (6/14)
+- 発表大成功
