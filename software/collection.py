@@ -95,9 +95,9 @@ def authenticate(image_file, collection_id='face_db', threshold=0.95):
 def main():
     print(delete_collection(), flush=True)
     print(create_collection(), flush=True)
-    update_db('/home/pi/workspace/software/db')
+    update_db('/path/to/db')
     print('DB constructed', flush=True)
-    print(authenticate('/home/pi/workspace/software/db/abe.jpg'))
+    print(authenticate('/path/to/image'))
 
 
 if __name__ == '__main__':
