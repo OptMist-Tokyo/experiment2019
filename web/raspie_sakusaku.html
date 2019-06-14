@@ -1,0 +1,98 @@
+<html>
+<meta charset="utf-8">
+<head>
+<link rel="stylesheet" href="css/bootstrap.css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<title>さくさくラズベリーパイを焼こう！</title>
+<style>
+body{
+  background-image: url(sakusaku_pie.jpg);
+  background-size: cover;
+}
+form{
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: pink;
+  padding: 20px;
+  opacity: 0.85;
+  border-radius: 15px;
+}
+img.right{
+  float: right;
+  margin-top: 40px;
+  margin-right: 20pt;
+}
+strong{
+  font-size: x-large;
+}
+em{
+  color: #F00;
+  font-weight: bold;
+}
+div.form-group  {
+     margin-top : 10px;
+}
+p{
+  margin-top : 10px;
+  margin-left : 5px;
+}
+</style>
+</head>
+<!--
+<body>
+  <p>
+  <strong>【パスワード認証に成功しました！】</strong><br>
+  以下から画像をアップロードしてください。
+  </p>
+  <form action="upload.php" method="post" enctype="multipart/form-data">
+    <p><input type="file" name="upfile" accept="image/*"></p>
+    <p>あなたの名前を<em>アルファベットで入力</em>してください。</p>
+    <p>
+      <label>姓：</label>
+      <input type="text" name="lastname" value="" size="20"><br>
+      <label>名：</label>
+      <input type="text" name="firstname" value="" size="20">
+    </p>
+    <p><input type="submit" name="Send" value="送信"></p>
+  </form>
+</body>
+-->
+<body>
+<p><strong>【パスワード認証に成功しました！】</strong></p>
+<p>　以下から画像をアップロードしてください。</p>
+<form name="passform" class="form-horizontal" action="upload.php" method="post" enctype="multipart/form-data">
+  <img src="meipy_logo.png" class="right" width="300" height="200" alt="">
+  <div class="form-group">
+    <label class="col-sm-3 control-label">アップロードするファイル</label>
+    <div class="col-sm-7">
+    <input id="lefile" name="upfile" type="file" style="display:none">
+    <div class="input-group">
+      <input type="text" id="photoCover" class="form-control" placeholder="ファイルを選択してください。">
+      <span class="input-group-btn"><button type="button" class="btn btn-info" onclick="$('input[id=lefile]').click();">ファイル選択</button></span>
+    </div>
+    <script>
+      $('input[id=lefile]').change(function() {
+        $('#photoCover').val($(this).val().replace("C:\\fakepath\\", ""));
+      });
+    </script>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-3 control-label">姓（半角英数字で入力）</label>
+    <div class="col-sm-7">
+    <input type="text" class="form-control" name="lastname" placeholder="例：Aragaki">
+  </div>
+  <div class="form-group">
+    <label class="col-sm-3 control-label">名（半角英数字で入力）</label>
+    <div class="col-sm-7">
+      <input type="text" class="form-control" name="firstname" placeholder="例：Yui">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <input type="submit" class="btn btn-success" name="Send" value="送信">
+    </div>
+  </div>
+</form>
+</body>
+</html>

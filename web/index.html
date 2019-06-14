@@ -1,0 +1,67 @@
+<html>
+<meta charset="utf-8">
+<head>
+<link rel="stylesheet" href="css/bootstrap.css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<title>さくさくラズベリーパイを焼こう！</title>
+<style>
+body{
+  background-image: url(raspberry_pie.jpg);
+  background-size: cover;
+}
+em{
+  color: yellow;
+  opacity: 1.0;
+  padding: 2pt;
+  margin-left: 5pt;
+}
+div.form-group  {
+     margin-top : 10px;
+}
+</style>
+<script type="text/javascript">
+  var human = false;
+  function Check(s){
+	  if(s.NAME.value!="" && s.PW.value!=""){
+      if(human){
+		     location.href = s.NAME.value + "_" + s.PW.value + ".html";
+      }
+      else{
+        window.alert("ロボットによるログインはお断りです！！");
+      }
+	  }
+  }
+</script>
+</head>
+<body>
+<form name="passform" class="form-horizontal">
+  <div class="form-group">
+    <label for="InputUsername" class="col-sm-2 control-label">ユーザ名</label>
+    <div class="col-sm-7">
+    <input type="text" class="form-control" name="NAME" placeholder="Username">
+  </div>
+  <div class="form-group">
+    <label for="inputPassword" class="col-sm-2 control-label">パスワード</label>
+    <div class="col-sm-7">
+      <input type="password" class="form-control" name="PW" placeholder="Password">
+    </div>
+  </div>
+  <div class="form-group">
+     <div class="col-sm-offset-2 col-sm-10">
+       <div class="checkbox">
+         <label background-color="lightblue">
+           <input type="checkbox" name="HUMAN" onClick="human=!human">
+           <em>私はロボットではありません。</em>
+         </label>
+       </div>
+     </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <input type="button" class="btn btn-success" name="sending" value="送信" onclick="Check(this.form)">
+    </div>
+  </div>
+</form>
+</body>
+</html>
